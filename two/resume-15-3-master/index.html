@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>方方的个人简历</title>
+  <link rel="stylesheet" href="./a.css">
+  <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+  <style type="text/css">
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" href="css/head.css" />
+</head>
+
+<body>
+  <div class="topNavBar">
+    <div class="topNavBar-inner clearfix">
+      <a class="logo" href="#" alt="logo" style="float: left;">
+        <span class="rs">RS</span>
+        <span class="card">card</span>
+      </a>
+     <!-- 导航 -->
+	<header class="header"> 
+		<div class="container clearfix"> 
+			<div class="fl left">
+				<a href="javascript:void(0)" ><img src="image/logo.png" alt="" class="img1" /></a>
+				<a href="javascript:void(0)" ><img src="image/logo2.jpg" alt="" class="img2" /></a>
+			</div>
+			<div class="fr nav"> 
+				<ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+					<li class="active">
+						<a href="javascript:void(0)">首页</a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0)">
+							业务体系
+						</a>
+						<div class="dropdown_menu">
+							<a href="#">Custom Menu</a>
+							<a href="#">Custom Menu</a>
+							<a href="#">Custom Menu</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:void(0)">直营园</a>
+						<div class="dropdown_menu">
+							<a href="#">Custom Menu</a>
+							<a href="#">Custom Menu</a>
+							<a href="#">Custom Menu</a>
+						</div>
+					</li>
+					<li>
+						<a href="javascript:void(0)">行知资讯</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">关于我们</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">联系合作</a>
+					</li>
+				</ul>
+			</div>
+			<a href="javascript:void(0)" id="navToggle">
+	            <span></span>
+	        </a>
+		</div>
+	</header>
+	<!--移动端的导航-->
+	<div class="m_nav">
+		<div class="top clearfix">
+			<img src="image/closed.png" alt="" class="closed" />
+		</div>
+		<div class="logo">
+			<img src="image/logo2.jpg" alt="" />
+		</div>
+		<ul class="ul" data-in="fadeInDown" data-out="fadeOutUp">
+			<li class="active">
+				<a href="javascript:void(0)">首页</a>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)">
+					业务体系
+				</a>
+				<div class="dropdown_menu">
+					<a href="#">Custom Menu</a>
+					<a href="#">Custom Menu</a>
+					<a href="#">Custom Menu</a>
+				</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)">直营园</a>
+				<div class="dropdown_menu">
+					<a href="#">Custom Menu</a>
+					<a href="#">Custom Menu</a>
+					<a href="#">Custom Menu</a>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)">行知资讯</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)">关于我们</a>
+			</li>
+			<li>
+				<a href="javascript:void(0)">联系合作</a>
+			</li>
+		</ul>
+	</div>
+	<div class="banner">
+		<img src="image/aa.jpg">
+	</div>
+	<div class="box" style="height: 1000px;">
+		<h3 style="text-align: center; color: aliceblue">调整浏览器宽度大小查看效果</h3>
+	</div>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		$(function(){
+			//超过一定高度导航添加类名
+			var nav=$("header"); //得到导航对象  
+			var win=$(window); //得到窗口对象  
+			var sc=$(document);//得到document文档对象。  
+			win.scroll(function(){  
+			  if(sc.scrollTop()>=100){  
+			    nav.addClass("on");   
+			  }else{  
+			   nav.removeClass("on");  
+			  }  
+			})   
+
+			//移动端展开nav
+			$('#navToggle').on('click',function(){
+				$('.m_nav').addClass('open');
+			})
+			//关闭nav
+			$('.m_nav .top .closed').on('click',function(){
+				$('.m_nav').removeClass('open');
+			})
+			
+			//二级导航  移动端
+		    $(".m_nav .ul li").click(function() {
+				$(this).children("div.dropdown_menu").slideToggle('slow')
+		        $(this).siblings('li').children('.dropdown_menu').slideUp('slow');				
+		    });
+
+		})
+	</script>
+    </div>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
+  <main style="">
+    <div class="userCard">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
+        </div>
+        <div class="text">
+          <span class="welcome">Hello
+            <span class="triangle"></span>
+          </span>
+          <h1>方应杭</h1>
+          <p>前端开发工程师</p>
+          <hr>
+          <dl>
+            <dt>年龄</dt>
+            <dd>18</dd>
+            <dt>所在城市</dt>
+            <dd>北京</dd>
+            <dt>邮箱</dt>
+            <dd>fangyinghang@foxmail.com</dd>
+            <dt>手机</dt>
+            <dd>13812345678</dd>
+          </dl>
+        </div>
+      </div>
+      <footer class="media">
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-Ankerwebicon-"></use>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-weibo"></use>
+          </svg>
+        </a>
+      </footer>
+    </div>
+
+    <p class="downloadResume-wrapper">
+      <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+    </p>
+
+    <p class="selfIntroduction">
+      方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
+      <br> 技能：前端开发，Rails 开发，Node.js 开发
+    </p>
+
+  </main>
+  <section class="skills">
+    <h2>技能</h2>
+    <ol class="clearfix">
+      <li>
+        <h3>
+          HTML 5 &amp; CSS 3
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 10%;"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          JavaScript
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 20%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          jQuery
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 30%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Vue.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 40%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          React.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 50%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          Node.js
+        </h3>
+        <div class="progressBar">
+          <div class="progress"  style="width: 60%"></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+  <section class="portfolio">
+    <h2>作品集</h2>
+    <nav>
+      <ol class="clearfix">
+        <li id="portfolio1">所有</li>
+        <li id="portfolio2">框架</li>
+        <li id="portfolio3">原生JS&amp;CSS</li>
+      </ol>
+      <div id="portfolioBar" class="bar state-1">
+        <div class="bar-inner"></div>
+      </div>
+    </nav>
+    <script>
+      portfolio1.onclick= function(){
+        portfolioBar.className = 'bar state-1'
+      }
+      portfolio2.onclick= function(){
+        portfolioBar.className = 'bar state-2'
+      }
+      portfolio3.onclick= function(){
+        portfolioBar.className = 'bar state-3'
+      }
+    </script>
+
+
+    <div class="works" style="height: 597px;">
+      <div class="big" style="top: 0; left: 0;">
+        <img src="./img/1.jpg" alt="作品1">
+      </div>
+      <div class="small" style="top: 0; left: 645px;">
+        <img src="./img/2.jpg" alt="作品2">
+      </div>
+      <div class="small" style="top: 312px; left: 645px;">
+        <img src="./img/3.jpg" alt="作品3">
+      </div>
+    </div>
+
+  </section>
+</body>
+
+</html>
