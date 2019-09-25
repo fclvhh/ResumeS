@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手写AJAX</title>
+</head>
+<body>
+    <button id="button">点我一下</button>
+    <script>
+        var button = document.getElementById('button')
+        button.addEventListener('click',(e)=>{
+            let req =new XMLHttpRequest()
+            req.open('get','/xxx')
+            req.send()
+            req.onreadystatechange = function(){
+                if(req.readyState===4){
+                    console.log('一次请求完毕了!')
+                    console.log(req.status)
+                    if(req.status>=200&&req.status<300){
+                        console.log('请求成功了')
+                        //我们看一下这次请求成功后,得到的响应的内容
+                        console.log(req.responseText)
+                        let string = req.responseText
+                        let obj = JSON.parse(string)
+                    }
+                }
+
+            }
+
+        })
+    </script>
+</body>
+</html>
